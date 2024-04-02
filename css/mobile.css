@@ -46,7 +46,8 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
  /* S e c t i o n  I m a g e n */
-.aside-container{
+.aside-container,
+.aside-text-container{
     flex: 1;
     top: 0;
     right: 0;
@@ -91,7 +92,7 @@ body{
     flex: 1;
     top: 0;
     right: 0;
-    background-color: rgb(197, 85, 165);
+    background-color: #c555a5;
     width: 45%;
     position: absolute;
     z-index: 999;
@@ -155,4 +156,5 @@ body{
     background-color: violet;
     height: 10vh;
     width: 100%;
+    color: white;
 }

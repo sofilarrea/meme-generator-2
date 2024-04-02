@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="hero-section" id="hero-section">     
@@ -17,6 +18,7 @@
     </header>
     <aside id="aside-image">
         <section class="aside-container">
+            <button id="close-img">Close</button>
             <h4 class="title-img">Imágen</h4>
             <ul class="sidebar-input">   
                 <li>
@@ -110,6 +112,7 @@
     </aside>
     <aside id="aside-text">
         <section class="aside-text-container">
+            <button id="close-text">Close</button>
             <h4>Texto</h4>
             <div class="sidebar-input-text"> 
                 <ul class="first-list">
@@ -128,7 +131,7 @@
                         <label for="hideTextCheckboxInf">Sin texto inferior</label>
                     </li>
                     <li>
-                        <label id="font-family" aria-label="Estilos de fuente">FUENTE</label>
+                        <label id="font-family" aria-label="Estilos de fuente">Fuente</label>
                         <select id="font-family-p">
                             <option value="impact">Impact</option>
                             <option value="arial">Arial</option>
@@ -143,7 +146,7 @@
                     </li>
                     <br>
                     <li>
-                        <label id="text-font-size" aria-label="Tamaño de texto">TAMAÑO</label>
+                        <label id="text-font-size" aria-label="Tamaño de texto">Tamaño</label>
                         <input type="number" min="30" max="60" value="30" id="font-size">
                     </li>
                     <br>

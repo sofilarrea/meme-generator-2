@@ -13,7 +13,21 @@ asideButtonImg.addEventListener('click', () => {
 asideButtonText.addEventListener('click', () => {
     asideImg.style.display = 'none';
     asideText.style.display = 'block';
-});  
+}); 
+
+const closeImg = document.getElementById('close-img');
+
+closeImg.addEventListener('click', () => {
+    asideImg.style.display = 'none';
+    
+});
+const closeText = document.getElementById('close-text');
+
+closeText.addEventListener('click', () => {
+    asideText.style.display = 'none';
+    
+});
+
 
 /* Variable útiles */
 const heroSection = document.getElementById("hero-section")
@@ -24,9 +38,8 @@ const cuadradoDos = document.getElementById("cuadrado-dos")
 const download = document.getElementById("download")
 const downloadButton = document.getElementById("download-button")
 const heroButton = document.getElementById("hero-section")
-const asideContainer = document.getElementById("aside-container")
+const asideContainer = document.getElementById("aside-text-container")
 const footer = document.getElementById("footer")
-const footerP = document.getElementById("footer-p")
 
 let modo = "claro"; 
 modoButton.addEventListener("click", () => {
@@ -223,17 +236,19 @@ function toggleTextoInf() {
 }
 
 /* Texto cambiar de  color */
-const colorInputText = document.getElementById("color_input_texto"); /*square_dos*/
+const colorInputText = document.getElementById("color_input_texto"); 
 
 colorInputText.addEventListener('input', ()=> {
     console.log("dentro de la funcion")
-    textoUp.style.color = colorInputText.value;
+    textoUp.style.background = colorInputText.value;
+    textoDown.style.background = colorInputText.value; 
+    textoUp.style.color = colorInputText.value;    
     textoDown.style.color = colorInputText.value;
 });
 
 
 /* Fondo cambiar de color */
-const colorInputFondo = document.getElementById("color_input_fondo"); /*square_dos*/
+const colorInputFondo = document.getElementById("color_input_fondo"); 
 
 colorInputFondo.addEventListener('input', cambioColorFondo);
 function cambioColorFondo() {
@@ -249,33 +264,33 @@ fontFamilyP.addEventListener('change', ()=> {
     fontFamilyChange();
   });
   
-  function fontFamilyChange(){
-    if (fontFamilyP.value == 'impact'){
-      textoDown.style.fontFamily = 'impact';
-        textoUp.style.fontFamily = 'impact';
-    } else if (fontFamilyP.value == 'arial'){
-      textoDown.style.fontFamily = 'Arial';
-     textoUp.style.fontFamily = 'Arial';
-    } else if (fontFamilyP.value == 'arialBlack'){
-      textoDown.style.fontFamily = 'Arial Black';
-     textoUp.style.fontFamily = 'Arial Black';
-    } else if (fontFamilyP.value == 'americanTypewriter'){
-      textoDown.style.fontFamily = 'American Typewriter';
-     textoUp.style.fontFamily = 'American Typewriter';
-    } else if (fontFamilyP.value == 'madimiOne'){
-      textoDown.style.fontFamily = 'Madimi One';
-     textoUp.style.fontFamily = 'Madimi One';
-    } else if (fontFamilyP.value == 'comicSans'){
-      textoDown.style.fontFamily = 'Comic Sans MS';
-     textoUp.style.fontFamily = 'Comic Sans MS';
-    } else if (fontFamilyP.value == 'helvetica'){
-      textoDown.style.fontFamily = 'Helvetica';
-     textoUp.style.fontFamily = 'Helvetica';
-    } else if (fontFamilyP.value == 'verdana'){
-      textoDown.style.fontFamily = 'Verdana';
-     textoUp.style.fontFamily = 'Verdana';
-    } else if (fontFamilyP.value == 'timesNewRoman'){
-      textoDown.style.fontFamily = 'Times New Roman';
-     textoUp.style.fontFamily = 'Times New Roman';
+  function fontFamilyChange() {
+    const selectedFont = fontFamilyP.value;
+    const validFonts = ['impact', 'arial', 'arialBlack', 'americanTypewriter', 'madimiOne', 'comicSans', 'helvetica', 'verdana', 'timesNewRoman'];
+    const defaultFont = 'Arial';
+
+    if (validFonts.includes(selectedFont)) {
+        textoDown.style.fontFamily = selectedFont;
+        textoUp.style.fontFamily = selectedFont;
+    } else {
+        textoDown.style.fontFamily = defaultFont;
+        textoUp.style.fontFamily = defaultFont;
     }
-  };
+}
+
+
+const fontSize = document.getElementById('font-size');
+fontSize.addEventListener('input', ()=> {
+    textoDown.style.fontSize = `${fontSize.value}px`;
+    textoUp.style.fontSize = `${fontSize.value}px`;
+});
+
+
+
+
+
+console.log(fontSize);
+console.log(fontFamilyP);
+console.log(textoDown);
+console.log(textoUp);
+

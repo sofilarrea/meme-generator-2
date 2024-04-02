@@ -1,22 +1,16 @@
 .title-img{
-    font-size: 2.5rem;
- 
+    font-size: 2.5rem; 
 }
-
-
 .aside-container {
     width: 60%;
     height: 129vh;
 }
-
 .aside-container ul li,
 .aside-container label,
 .sidebar ul  label,
 .aside-text-container,
-.aside-text-container ul li{
-    
-    font-size: 1.9rem;
-  
+.aside-text-container ul li{    
+    font-size: 1.9rem;  
 }
 
 #img_input{
@@ -30,4 +24,7 @@
 }
 #blendModeFilter{
     font-size: 2rem;
+}
+#close{
+    border: none;
 }
