@@ -311,3 +311,14 @@ fontSizeInput.addEventListener('change', function() {
 const fontSizeInput = document.getElementById('font-size');
 const fontSizeValue = fontSizeInput.value;
 
+/* Alineado de texto */
+
+let textAlignLeft = document.getElementById('text-align-left');
+let textAlignCenter = document.getElementById('text-align-center');
+let textAlignRight = document.getElementById('text-align-right');
+
+textAlignLeft.addEventListener('click', ()=> {
+    textoUp.style.textAlign = `left`;
+    textoDown.style.textAlign = `left`;
+  });
+  
