@@ -25,7 +25,8 @@ const download = document.getElementById("download")
 const downloadButton = document.getElementById("download-button")
 const heroButton = document.getElementById("hero-section")
 const asideContainer = document.getElementById("aside-container")
-
+const footer = document.getElementById("footer")
+const footerP = document.getElementById("footer-p")
 
 let modo = "claro"; 
 modoButton.addEventListener("click", () => {
@@ -36,6 +37,8 @@ modoButton.addEventListener("click", () => {
         cuadrado.style.backgroundColor = "fuchsia";
         cuadradoDos.style.backgroundColor= "pink";
         download.style.backgroundColor = "violet";
+        footer.style.backgroundColor = "violet";
+        
         sectionPart.style.color = "black";
         modo = "claro";
     } else  {    
@@ -46,6 +49,8 @@ modoButton.addEventListener("click", () => {
         cuadrado.style.backgroundColor = "black";
         cuadradoDos.style.backgroundColor = "grey";
         download.style.backgroundColor = "black";
+        footer.style.backgroundColor = "black";
+        
         sectionPart.style.color = "white";
         modo = "dark";
     }
@@ -175,8 +180,8 @@ const inferiorInput = document.getElementById('text-input-inf');
 const textoUp = document.getElementById('textoUp');
 const textoDown = document.getElementById('textoDown');
 
-superiorInput.addEventListener('input', actualizarTexto);
-inferiorInput.addEventListener('input', actualizarTexto);   
+superiorInput.addEventListener('keyup', actualizarTexto);
+inferiorInput.addEventListener('keyup', actualizarTexto);   
 
 function actualizarTexto() {
     const textoSuperior = superiorInput.value;
@@ -215,4 +220,20 @@ function toggleTextoInf() {
         
         textoDown.style.visibility = 'hidden';
     }
+}
+
+/* Texto cambiar de  color */
+const colorInputText = document.getElementById("color_input_texto"); /*square_dos*/
+
+colorInputText.addEventListener('input', ()=> {
+    textoUp.style.backgroundColorcolor = colorInputText.value;
+});
+
+
+/* Fondo cambiar de color */
+const colorInputFondo = document.getElementById("color_input_fondo"); /*square_dos*/
+
+colorInputFondo.addEventListener('input', cambioColorFondo);
+function cambioColorFondo() {
+    cuadrado.style.backgroundColor = colorInputFondo.value;
 }

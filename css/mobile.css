@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: violet;
+
+}
 .hero-section{
     height: 20vh;
     display: flex;
@@ -14,10 +18,10 @@
     background-color: violet;
 }
 .title{
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     top: 15%;
     position: relative;
-    font-family: 'Sendcat';
+    font-family: 'old_stamper';
     color:  #dd15c2;
     text-shadow: black 2px 2px 2px;
     letter-spacing: 5px;
@@ -29,9 +33,10 @@
     gap: 10px; 
     list-style: none;
     position: relative;
-    top: 15%;
+    top: 35%;  
 }
 .hero-button button{
+    font-size: 16px;
     border: none;
     margin-bottom: 40px;  
     background-color: transparent;    
@@ -41,8 +46,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
  /* S e c t i o n  I m a g e n */
-.aside-container,
-.aside-text-container{
+.aside-container{
     flex: 1;
     top: 0;
     right: 0;
@@ -61,6 +65,7 @@
     color: white;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 2px auto;
 }
 .title-img,
 .aside-text-container h4{
@@ -73,6 +78,18 @@
 .first-list li{
     margin-top: 20px;
 
+}
+
+.aside-text-container{
+    flex: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(197, 85, 165);
+    width: 45%;
+    position: absolute;
+    z-index: 999;
+    height: 129vh;
+       
 }
 #aside-image,
 #aside-text {
@@ -116,4 +133,12 @@
     background-color: #b2116c;
     border: none;
     padding: 10px 20px;
+}
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+    height: 10vh;
+    width: 100%;
 }
