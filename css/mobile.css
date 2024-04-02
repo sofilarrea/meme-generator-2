@@ -8,7 +8,7 @@ body{
 
 }
 .hero-section{
-    height: 20vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,17 +46,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
  /* S e c t i o n  I m a g e n */
-.aside-container,
-.aside-text-container{
-    flex: 1;
-    top: 0;
-    right: 0;
-    background-color: rgb(197, 85, 165);
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-       
-}
+
 .aside-container ul li,
 .aside-container label,
 .sidebar ul  label,
@@ -65,8 +55,7 @@ body{
     list-style: none;
     color: white;
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 2px auto;
+    font-family: Arial, Helvetica, sans-serif;   
 }
 .sidebar-fondo{
     display: flex;
@@ -80,7 +69,7 @@ body{
     margin-top: 0;
     margin-bottom: 20px;
     width: 100%;
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
 }
 .first-list li{
@@ -88,20 +77,26 @@ body{
 
 }
 
-.aside-text-container{
-    flex: 1;
-    top: 0;
-    right: 0;
-    background-color: #c555a5;
-    width: 45%;
-    position: absolute;
-    z-index: 999;
-    height: 129vh;
-       
-}
+
 #aside-image,
 #aside-text {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgb(245, 13, 156); /* Fondo semitransparente */
+    display: none; /* Por defecto oculto */
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical si es necesario */
+}
+#aside-image .aside-container,
+#aside-text .aside-text-container {
+    position: absolute;
+ 
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
 }
 .range{
     width: 90%;

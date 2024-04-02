@@ -303,13 +303,12 @@ fontSize.addEventListener('input', () => {
 
 
 // Escucha el evento de cambio en el input de número
-fontSizeInput.addEventListener('change', function() {
-    const selectedFontSize = fontSizeInput.value;
+fontSize.addEventListener('change', function() {
+    const selectedFontSize = fontSize.value;
     
     textoUp.style.fontSize = selectedFontSize + 'px';
 });
-const fontSizeInput = document.getElementById('font-size');
-const fontSizeValue = fontSizeInput.value;
+
 
 /* Alineado de texto */
 
@@ -317,8 +316,20 @@ let textAlignLeft = document.getElementById('text-align-left');
 let textAlignCenter = document.getElementById('text-align-center');
 let textAlignRight = document.getElementById('text-align-right');
 
-textAlignLeft.addEventListener('click', ()=> {
-    textoUp.style.textAlign = `left`;
-    textoDown.style.textAlign = `left`;
-  });
-  
+textAlignLeft.addEventListener('click', () => {
+    textoUp.style.textAlign = 'left';
+    textoDown.style.textAlign = 'left';
+}
+);
+textAlignCenter.addEventListener('click', () => {
+    textoUp.style.textAlign = 'center';
+    textoDown.style.textAlign = 'center';
+}
+);
+
+textAlignRight.addEventListener('click', () => {
+    textoUp.style.textAlign = 'right';
+    textoDown.style.textAlign = 'right';
+}
+);
+
