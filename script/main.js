@@ -239,3 +239,43 @@ colorInputFondo.addEventListener('input', cambioColorFondo);
 function cambioColorFondo() {
     cuadrado.style.backgroundColor = colorInputFondo.value;
 }
+
+
+/* Cambio de fuente */
+const fontFamilyP = document.getElementById('font-family-p');
+
+// Font family, size and text direction
+fontFamilyP.addEventListener('change', ()=> {
+    fontFamilyChange();
+  });
+  
+  function fontFamilyChange(){
+    if (fontFamilyP.value == 'impact'){
+      textoDown.style.fontFamily = 'impact';
+        textoUp.style.fontFamily = 'impact';
+    } else if (fontFamilyP.value == 'arial'){
+      textoDown.style.fontFamily = 'Arial';
+     textoUp.style.fontFamily = 'Arial';
+    } else if (fontFamilyP.value == 'arialBlack'){
+      textoDown.style.fontFamily = 'Arial Black';
+     textoUp.style.fontFamily = 'Arial Black';
+    } else if (fontFamilyP.value == 'americanTypewriter'){
+      textoDown.style.fontFamily = 'American Typewriter';
+     textoUp.style.fontFamily = 'American Typewriter';
+    } else if (fontFamilyP.value == 'madimiOne'){
+      textoDown.style.fontFamily = 'Madimi One';
+     textoUp.style.fontFamily = 'Madimi One';
+    } else if (fontFamilyP.value == 'comicSans'){
+      textoDown.style.fontFamily = 'Comic Sans MS';
+     textoUp.style.fontFamily = 'Comic Sans MS';
+    } else if (fontFamilyP.value == 'helvetica'){
+      textoDown.style.fontFamily = 'Helvetica';
+     textoUp.style.fontFamily = 'Helvetica';
+    } else if (fontFamilyP.value == 'verdana'){
+      textoDown.style.fontFamily = 'Verdana';
+     textoUp.style.fontFamily = 'Verdana';
+    } else if (fontFamilyP.value == 'timesNewRoman'){
+      textoDown.style.fontFamily = 'Times New Roman';
+     textoUp.style.fontFamily = 'Times New Roman';
+    }
+  };
