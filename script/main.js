@@ -109,3 +109,63 @@ if (blendModeFilter.value == 'ninguno'){
 
 containerImg.style.backgroundColor = color.value;
 };
+
+/* Filtros Imágen */
+const colorInput = document.getElementById("color_input_image");
+const tipoColorSelect = document.getElementById("tipeColor");
+const colorSection = document.querySelector(".color-section");
+
+document.addEventListener("DOMContentLoaded", function() {
+    const imagen = document.getElementById("cuadrado-dos");
+    const brightnessRange = document.getElementById("brightnessRange");
+    const opacityRange = document.getElementById("opacityRange");
+    const contrastRange = document.getElementById("contrastRange");
+    const blurRange = document.getElementById("blurRange");
+    const grayscaleRange = document.getElementById("grayscaleRange");
+    const sepiaRange = document.getElementById("sepiaRange");
+    const hueRange = document.getElementById("hueRange");
+    const saturateRange = document.getElementById("saturateRange");
+    const invertRange = document.getElementById("invertRange");
+    const clearFiltersButton = document.getElementById("clearFiltersButton");
+
+    brightnessRange.addEventListener("input", updateFilters);
+    opacityRange.addEventListener("input", updateFilters);
+    contrastRange.addEventListener("input", updateFilters);
+    blurRange.addEventListener("input", updateFilters);
+    grayscaleRange.addEventListener("input", updateFilters);
+    sepiaRange.addEventListener("input", updateFilters);
+    hueRange.addEventListener("input", updateFilters);
+    saturateRange.addEventListener("input", updateFilters);
+    invertRange.addEventListener("input", updateFilters);
+
+    clearFiltersButton.addEventListener("click", clearFilters);
+
+    function updateFilters() {
+        const brightnessValue = brightnessRange.value;
+        const opacityValue = opacityRange.value;
+        const contrastValue = contrastRange.value;
+        const blurValue = blurRange.value;
+        const grayscaleValue = grayscaleRange.value;
+        const sepiaValue = sepiaRange.value;
+        const hueValue = hueRange.value;
+        const saturateValue = saturateRange.value;
+        const invertValue = invertRange.value;
+
+        imagen.style.filter = `brightness(${brightnessValue}%) opacity(${opacityValue}) contrast(${contrastValue}%) blur(${blurValue}px) grayscale(${grayscaleValue}%) sepia(${sepiaValue}%) hue-rotate(${hueValue}deg) saturate(${saturateValue}%) invert(${invertValue}%)`;
+    }
+
+    function clearFilters() {
+        brightnessRange.value = 100;
+        opacityRange.value = 1;
+        contrastRange.value = 100;
+        blurRange.value = 0;
+        grayscaleRange.value = 0;
+        sepiaRange.value = 0;
+        hueRange.value = 0;
+        saturateRange.value = 100;
+        invertRange.value = 0;
+
+        imagen.style.filter = "none";
+    }
+});
+
