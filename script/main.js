@@ -77,3 +77,35 @@ imgInput.addEventListener("keyup", function (event) {
     }
 });
 
+/* Color Img */
+const color = document.getElementById('color');
+const containerImg = document.getElementById("cuadrado-dos");
+const hexaColor = document.getElementById('hexa-color');
+const blendModeFilter = document.getElementById('blendModeFilter');
+
+color.addEventListener('input', ()=> {
+    hexaColor.textContent = color.value;
+    aplyBlendMode();
+});
+
+blendModeFilter.addEventListener('change', ()=> {    
+    containerImg.style.backgroundImage =  aplyBlendMode();
+});
+
+function aplyBlendMode() {
+if (blendModeFilter.value == 'ninguno'){
+    containerImg.style.backgroundBlendMode = 'normal';
+} else if (blendModeFilter.value == 'aclarar'){
+    containerImg.style.backgroundBlendMode = 'lighten';
+} else if (blendModeFilter.value == 'oscurecer'){
+    containerImg.style.backgroundBlendMode = 'darken';
+} else if (blendModeFilter.value == 'diferencia'){
+    containerImg.style.backgroundBlendMode = 'difference';
+} else if (blendModeFilter.value == 'luminucidad'){
+    containerImg.style.backgroundBlendMode = 'luminosity';
+} else if (blendModeFilter.value == 'multiplicar'){
+    containerImg.style.backgroundBlendMode = 'multiply';
+}
+
+containerImg.style.backgroundColor = color.value;
+};
