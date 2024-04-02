@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header class="hero-section" id="hero-section">     
@@ -111,6 +111,110 @@
     <aside id="aside-text">
         <section class="aside-text-container">
             <h4>Texto</h4>
+            <div class="sidebar-input-text"> 
+                <ul class="first-list">
+                    <li>
+                        <p>Superior</p>
+                        <input type="text" id="text-input-sup" placeholder="">
+                        <br>
+                        <input type="checkbox" id="hideTextCheckboxSup">
+                        <label for="hideTextCheckboxSup">Sin texto superior</label>
+                    </li>
+                    <li>
+                        <p>Inferior</p> 
+                        <input type="text" id="text-input-inf" placeholder=""> 
+                        <br>  
+                        <input type="checkbox" id="hideTextCheckboxInf">
+                        <label for="hideTextCheckboxInf">Sin texto inferior</label>
+                    </li>
+                    <li>
+                        <p>Fuente</p> 
+                        <select id="opcion" name="opcion">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select>                       
+                    </li>
+                    <br>
+                    <li>
+                        <label id="text-font-size" aria-label="Tamaño de texto">TAMAÑO</label>
+                        <input type="number" min="30" max="60" value="30" id="font-size">
+                    </li>
+                    <br>
+                    <li>
+                        <div class="botons-directions-txt">
+                            <button type="button" class="button-direction" aria-label=" Izquierda">
+                                <i class="fa-solid fa-align-left" id="text-align-left"></i>
+                            </button>
+                            <button type="button" class="button-direction" aria-label="Texto inferior" aria-label="Centro">
+                                <i class="fa-solid fa-align-center" id="text-align-center"></i>
+                            </button>
+                            <button type="button" class="button-direction" aria-label="Derecha">
+                                <i class="fa-solid fa-align-right" id="text-align-right"></i>
+                            </button>
+                    </li>
+                </ul>  
+            </div>
+            <div class="sidebar-filter-text">
+                <ul class="color">
+                    <li>
+                        <p>Color</p> 
+                        <input type="color" id="color_input_texto">
+                    </li>
+                    <li>
+                        <p>Fondo</p> 
+                        <input type="color" id="color_input_fondo"> 
+                    </li>
+                </ul>           
+                <ul id="space-text-list" class="botones oculto">
+                    <li class="contorno">
+                        <label id="label-contorn">Contorno</label>
+                        <div class="botons-directions-txt">
+                            <button type="button" id="contorno-p-none" aria-label="Sin contorno">Ninguno</button>
+                            <br>
+                            <button type="button" id="contorno-p-light" aria-label="Contorno claro">Claro</button>
+                            <br>
+                            <button type="button" id="contorno-p-dark" aria-label="Contorno oscuro">Oscuro</button>
+                        </div>
+                    </li>
+                    <li>
+                        <label id="label-space">Espaciado</label>
+                        <input type="number" min="10" max="30" value="10" id="padding-p" aria-label="Espacio del texto">
+                    </li>
+                    <li>
+                        <label id="line-height-label">Interlineado</label>
+                        <select id="line-height-p">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>       
+        </section>
+    </aside> 
+    <section class="square-section" id="section">            
+        <div class="square" id="square">
+            <div class="texto" id="textoUp">   
+                <h2>Top text</h2>
+            </div>                
+            <div class="cuadrado" id="cuadrado-dos">                
+            </div>
+            <div class="texto"  id="textoDown">
+                <h2>Bottom Text</h2>
+            </div>
+            <div class="download" id="download">
+                <button id="download-button">Download Meme</button>
+            </div> 
+        </div>
         </section>
     </aside>
 

@@ -29,19 +29,16 @@ const asideContainer = document.getElementById("aside-container")
 
 let modo = "claro"; 
 modoButton.addEventListener("click", () => {
-    console.log("dentro del boton dark")
     if (modo === "dark"){
-       modoButton.textContent = "Dark Mode";       
+        modoButton.textContent = "Dark Mode";       
         heroSection.style.backgroundColor = "violet";
         sectionPart.style.backgroundColor = "violet";
         cuadrado.style.backgroundColor = "fuchsia";
         cuadradoDos.style.backgroundColor= "pink";
         download.style.backgroundColor = "violet";
-        asideContainer.style.backgroundColor = "violet"; // No funciona
         sectionPart.style.color = "black";
         modo = "claro";
-    } else  {
-        console.log("dentro del else")
+    } else  {    
         modoButton.textContent = "Pink Mode";
         heroButton.style.color = "black";
         heroSection.style.backgroundColor = "black";
@@ -49,7 +46,6 @@ modoButton.addEventListener("click", () => {
         cuadrado.style.backgroundColor = "black";
         cuadradoDos.style.backgroundColor = "grey";
         download.style.backgroundColor = "black";
-        asideContainer.style.backgroundColor = "black"; // No funciona
         sectionPart.style.color = "white";
         modo = "dark";
     }
@@ -169,3 +165,54 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+
+
+/* S e c t i o n  T e x t */
+/* Agregar texto sup e inf */
+const superiorInput = document.getElementById('text-input-sup');
+const inferiorInput = document.getElementById('text-input-inf');
+const textoUp = document.getElementById('textoUp');
+const textoDown = document.getElementById('textoDown');
+
+superiorInput.addEventListener('input', actualizarTexto);
+inferiorInput.addEventListener('input', actualizarTexto);   
+
+function actualizarTexto() {
+    const textoSuperior = superiorInput.value;
+    const textoInferior = inferiorInput.value;
+   
+
+    const textoSuperiorHTML = `<h2>${textoSuperior}</h2>`;
+    const textoInferiorHTML = `<h2>${textoInferior}</h2>`;
+
+    textoUp.innerHTML = textoSuperiorHTML;
+    textoDown.innerHTML = textoInferiorHTML;
+}
+
+
+/* texto sacar sup e inf */
+const hideTextCheckboxSup = document.getElementById('hideTextCheckboxSup');
+const hideTextCheckboxInf = document.getElementById('hideTextCheckboxInf');
+
+hideTextCheckboxSup.addEventListener('change', toggleTextoSup);
+hideTextCheckboxInf.addEventListener('change', toggleTextoInf);
+
+/* sup */
+function toggleTextoSup() {
+    if (textoUp.style.visibility === 'hidden') {
+        textoUp.style.visibility = 'visible';
+    } else {
+        textoUp.style.visibility = 'hidden';
+    }
+}
+/* inf */
+function toggleTextoInf() {
+    if (textoDown.style.visibility === 'hidden') {
+        
+        textoDown.style.visibility = 'visible';
+    } else {
+        
+        textoDown.style.visibility = 'hidden';
+    }
+}
