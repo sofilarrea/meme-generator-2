@@ -51,7 +51,7 @@ body{
     top: 0;
     right: 0;
     background-color: rgb(197, 85, 165);
-    width: 45%;
+    width: 100%;
     position: absolute;
     z-index: 999;
        
@@ -67,13 +67,20 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 2px auto;
 }
+.sidebar-fondo{
+    display: flex;
+    justify-content: space-between;
+}
 .title-img,
-.aside-text-container h4{
-    font-size: 1rem;
+.aside-text-container h4{   
     color: white;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    left: 27%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
 }
 .first-list li{
     margin-top: 20px;
@@ -94,6 +101,13 @@ body{
 #aside-image,
 #aside-text {
     display: none;
+}
+.range{
+    width: 90%;
+    margin: 2px auto;
+    text-align: center;
+    position: relative;
+    left: 5%;
 }
  /* S e c t i o n  P r i n c i p a l */
 /* Cuadraro */
