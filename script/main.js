@@ -226,7 +226,9 @@ function toggleTextoInf() {
 const colorInputText = document.getElementById("color_input_texto"); /*square_dos*/
 
 colorInputText.addEventListener('input', ()=> {
-    textoUp.style.backgroundColorcolor = colorInputText.value;
+    console.log("dentro de la funcion")
+    textoUp.style.color = colorInputText.value;
+    textoDown.style.color = colorInputText.value;
 });
 
 
