@@ -44,12 +44,12 @@ let modo = "claro";
 modoButton.addEventListener("click", () => {
     if (modo === "dark"){
         modoButton.textContent = "Dark Mode";       
-        heroSection.style.backgroundColor = "violet";
-        sectionPart.style.backgroundColor = "violet";
-        cuadrado.style.backgroundColor = "fuchsia";
-        cuadradoDos.style.backgroundColor= "pink";
-        download.style.backgroundColor = "violet";
-        footer.style.backgroundColor = "violet";
+        heroSection.style.backgroundColor = "#4d194d";
+        sectionPart.style.backgroundColor = "#4d194d";
+        cuadrado.style.backgroundColor = "#1b3a4b";
+        cuadradoDos.style.backgroundColor= "#006466";
+        download.style.backgroundColor = "#4d194d";
+        footer.style.backgroundColor = "#4d194d";
         
         sectionPart.style.color = "black";
         modo = "claro";
