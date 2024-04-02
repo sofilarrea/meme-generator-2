@@ -1,4 +1,3 @@
-console.log('Hello from script')
 /* Open and close aside */
 const asideImg = document.getElementById('aside-image')
 const asideText = document.getElementById('aside-text')
@@ -240,8 +239,7 @@ const colorInputText = document.getElementById("color_input_texto");
 
 colorInputText.addEventListener('input', ()=> {
     console.log("dentro de la funcion")
-    textoUp.style.background = colorInputText.value;
-    textoDown.style.background = colorInputText.value; 
+   
     textoUp.style.color = colorInputText.value;    
     textoDown.style.color = colorInputText.value;
 });
@@ -260,33 +258,103 @@ function cambioColorFondo() {
 const fontFamilyP = document.getElementById('font-family-p');
 
 // Font family, size and text direction
-fontFamilyP.addEventListener('change', ()=> {
-    fontFamilyChange();
-  });
+fontFamilyP.addEventListener('change', fontFamilyChange);
   
-  function fontFamilyChange() {
-    const selectedFont = fontFamilyP.value;
-    const validFonts = ['impact', 'arial', 'arialBlack', 'americanTypewriter', 'madimiOne', 'comicSans', 'helvetica', 'verdana', 'timesNewRoman'];
-    const defaultFont = 'Arial';
-
-    if (validFonts.includes(selectedFont)) {
-        textoDown.style.fontFamily = selectedFont;
-        textoUp.style.fontFamily = selectedFont;
-    } else {
-        textoDown.style.fontFamily = defaultFont;
-        textoUp.style.fontFamily = defaultFont;
+fontFamilyP.addEventListener('change', () => {
+    fontFamilyChange();
+});
+ /* function fontFamilyChange(){
+    switch (fontFamilyP.value) {
+        case 'impact':
+            textoDown.style.fontFamily = 'impact';
+            textoUp.style.fontFamily = 'impact';
+            break;
+        case 'arial':
+            textoDown.style.fontFamily = 'Arial';
+            textoUp.style.fontFamily = 'Arial';
+            break;
+        case 'arialBlack':
+            textoDown.style.fontFamily = 'Arial Black';
+            textoUp.style.fontFamily = 'Arial Black';
+            break;
+        case 'americanTypewriter':
+            textoDown.style.fontFamily = 'American Typewriter';
+            textoUp.style.fontFamily = 'American Typewriter';
+            break;
+        case 'andaleMono':
+            textoDown.style.fontFamily = 'Andale Mono';
+            textoUp.style.fontFamily = 'Andale Mono';
+            break;
+        case 'comicSans':
+            textoDown.style.fontFamily = 'Comic Sans MS';
+            textoUp.style.fontFamily = 'Comic Sans MS';
+            break;
+        case 'helvetica':
+            textoDown.style.fontFamily = 'Helvetica';
+            textoUp.style.fontFamily = 'Helvetica';
+            break;
+        case 'verdana':
+            textoDown.style.fontFamily = 'Verdana';
+            textoUp.style.fontFamily = 'Verdana';
+            break;
+        case 'timesNewRoman':
+            textoDown.style.fontFamily = 'Times New Roman';
+            textoUp.style.fontFamily = 'Times New Roman';
+            break;
+        default:
+            break;
     }
-}
+ } */
+
+  function fontFamilyChange(){
+    if (fontFamilyP.value == 'impact'){
+        textoDown.style.fontFamily = 'impact';
+        textoUp.style.fontFamily = 'impact';
+    } else if (fontFamilyP.value == 'arial'){
+        textoDown.style.fontFamily = 'Arial';
+        textoUp.style.fontFamily = 'Arial';
+    } else if (fontFamilyP.value == 'arialBlack'){
+        textoDown.style.fontFamily = 'Arial Black';
+        textoUp.style.fontFamily = 'Arial Black';
+    } else if (fontFamilyP.value == 'americanTypewriter'){
+        textoDown.style.fontFamily = 'American Typewriter';
+        textoUp.style.fontFamily = 'American Typewriter';
+    } else if (fontFamilyP.value == 'andaleMono'){
+        textoDown.style.fontFamily = 'andale mono';
+        textoUp.style.fontFamily = 'andale mono';
+    } else if (fontFamilyP.value == 'comicSans'){
+        textoDown.style.fontFamily = 'Comic Sans MS';
+        textoUp.style.fontFamily = 'Comic Sans MS';
+    } else if (fontFamilyP.value == 'helvetica'){
+        textoDown.style.fontFamily = 'Helvetica';
+        textoUp.style.fontFamily = 'Helvetica';
+    } else if (fontFamilyP.value == 'verdana'){
+        textoDown.style.fontFamily = 'Verdana';
+        textoUp.style.fontFamily = 'Verdana';
+    } else if (fontFamilyP.value == 'timesNewRoman'){
+        textoDown.style.fontFamily = 'Times New Roman';
+        textoUp.style.fontFamily = 'Times New Roman';
+    }
+};
 
 
 const fontSize = document.getElementById('font-size');
-fontSize.addEventListener('input', ()=> {
+/*fontSize.addEventListener('input', () => {
     textoDown.style.fontSize = `${fontSize.value}px`;
     textoUp.style.fontSize = `${fontSize.value}px`;
 });
 
-
-
+ */
+// Escucha el evento de cambio en el input de número
+fontSizeInput.addEventListener('change', function() {
+    // Obtén el valor del tamaño de fuente seleccionado por el usuario
+    const selectedFontSize = fontSizeInput.value;
+    
+    // Aplica el nuevo tamaño de fuente al elemento de texto
+    textoUp.style.fontSize = selectedFontSize + 'px';
+});
+const fontSizeInput = document.getElementById('font-size');
+const fontSizeValue = fontSizeInput.value;
 
 
 console.log(fontSize);
