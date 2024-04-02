@@ -1,0 +1,11 @@
+/* Stylesheets */
+@import url('./mobile.css');
+@import url('./mobile.css');
+@import url('./tablet.css') screen and (min-width: 768px);
+@import url('./desktop.css') screen and (min-width: 1024px);
+
+ 
+@font-face {
+    font-family:'Sendcat';
+    src: url('/assets/font/Sendcat.ttf');
+}

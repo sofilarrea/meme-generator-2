@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero-section{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+    flex-direction: column;
+    margin-bottom: -10px;
+    background-color: #1b4332;
+}
+.title{
+    font-size: 1.3rem;
+    top: 15%;
+    position: relative;
+    font-family: 'Sendcat';
+    color: #40916c;
+    text-shadow: black 2px 2px 2px;
+    letter-spacing: 5px;
+}
+.hero-button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px; 
+    list-style: none;
+    position: relative;
+    top: 35%;
+}
+.hero-button button{
+    border: none;
+    margin-bottom: 40px;  
+    background-color: transparent;    
+    color: white;     
+    font-weight: bolder;
+    text-shadow: black 0.5px 0px 0px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
