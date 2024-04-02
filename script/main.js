@@ -263,49 +263,6 @@ fontFamilyP.addEventListener('change', fontFamilyChange);
 fontFamilyP.addEventListener('change', () => {
     fontFamilyChange();
 });
- /* function fontFamilyChange(){
-    switch (fontFamilyP.value) {
-        case 'impact':
-            textoDown.style.fontFamily = 'impact';
-            textoUp.style.fontFamily = 'impact';
-            break;
-        case 'arial':
-            textoDown.style.fontFamily = 'Arial';
-            textoUp.style.fontFamily = 'Arial';
-            break;
-        case 'arialBlack':
-            textoDown.style.fontFamily = 'Arial Black';
-            textoUp.style.fontFamily = 'Arial Black';
-            break;
-        case 'americanTypewriter':
-            textoDown.style.fontFamily = 'American Typewriter';
-            textoUp.style.fontFamily = 'American Typewriter';
-            break;
-        case 'andaleMono':
-            textoDown.style.fontFamily = 'Andale Mono';
-            textoUp.style.fontFamily = 'Andale Mono';
-            break;
-        case 'comicSans':
-            textoDown.style.fontFamily = 'Comic Sans MS';
-            textoUp.style.fontFamily = 'Comic Sans MS';
-            break;
-        case 'helvetica':
-            textoDown.style.fontFamily = 'Helvetica';
-            textoUp.style.fontFamily = 'Helvetica';
-            break;
-        case 'verdana':
-            textoDown.style.fontFamily = 'Verdana';
-            textoUp.style.fontFamily = 'Verdana';
-            break;
-        case 'timesNewRoman':
-            textoDown.style.fontFamily = 'Times New Roman';
-            textoUp.style.fontFamily = 'Times New Roman';
-            break;
-        default:
-            break;
-    }
- } */
-
   function fontFamilyChange(){
     if (fontFamilyP.value == 'impact'){
         textoDown.style.fontFamily = 'impact';
@@ -339,26 +296,18 @@ fontFamilyP.addEventListener('change', () => {
 
 
 const fontSize = document.getElementById('font-size');
-/*fontSize.addEventListener('input', () => {
-    textoDown.style.fontSize = `${fontSize.value}px`;
-    textoUp.style.fontSize = `${fontSize.value}px`;
-});
+fontSize.addEventListener('input', () => {
+ textoDown.style.fontSize = `${fontSize.value}px`;
+ textoUp.style.fontSize = `${fontSize.value}px`;
+ });
 
- */
+
 // Escucha el evento de cambio en el input de número
 fontSizeInput.addEventListener('change', function() {
-    // Obtén el valor del tamaño de fuente seleccionado por el usuario
     const selectedFontSize = fontSizeInput.value;
     
-    // Aplica el nuevo tamaño de fuente al elemento de texto
     textoUp.style.fontSize = selectedFontSize + 'px';
 });
 const fontSizeInput = document.getElementById('font-size');
 const fontSizeValue = fontSizeInput.value;
-
-
-console.log(fontSize);
-console.log(fontFamilyP);
-console.log(textoDown);
-console.log(textoUp);
 
