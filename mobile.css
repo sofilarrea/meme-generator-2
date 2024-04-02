@@ -40,3 +40,37 @@
     text-shadow: black 0.5px 0px 0px; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+ /* S e c t i o n  I m a g e n */
+.aside-container{
+    flex: 1;
+    float: right;
+    background-color: #1b4332;
+    width: 45%; 
+    ;    
+}
+.aside-container ul li,
+.aside-container label,
+.sidebar ul  label{
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title-img{
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 27%;
+}
+.aside-text-container{
+    background-color: yellow;
+}
+#aside-image,
+#aside-text {
+    display: none;
+}
+ /* S e c t i o n  P r i n c i p a l */
+ .square-section{
+    background-color: black;
+ }

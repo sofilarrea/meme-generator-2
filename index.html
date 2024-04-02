@@ -10,10 +10,125 @@
     <header class="hero-section" id="hero-section">     
             <h1 class="title">Meme Generator</h1>      
        <ul class="hero-button">
-            <li><button id ="openSidebarButton"><i class="texto fa-regular fa-image"></i>Images</button></li>
-            <li><button id="openSidebarTextButton"><i class="texto fa-solid fa-font"></i>Text</button></li>
+            <li><button id ="openSidebarButtonImg"><i class="texto fa-regular fa-image"></i>Images</button></li>
+            <li><button id="openSidebarButtonText"><i class="texto fa-solid fa-font"></i>Text</button></li>
             <li><button id="dark">Dark Mode</button></li>         
         </ul>   
     </header>
+    <aside id="aside-image">
+        <section class="aside-container">
+            <h4 class="title-img">Imágen</h4>
+            <ul class="sidebar-input">   
+                <li>
+                    <label id="label-url">URL</label>
+                    <input type="text" id="img_input"  placeholder="Ingrese la URL de la imagen y presione Enter">
+                </li>
+            </ul>
+            <br>
+            <ul id="sidebar-fondo" class="sidebar-fondo">
+                <li>
+                    <label id="label-background" aria-label="Color del fondo">Fondo</label>
+                    <input type="color" id="color" value="#FFFFFF">
+                    <label id="hexa-color" aria-label="Color en hexadecimal"></label>
+                </li>
+                <br>
+                <li>                            
+                    <select id="blendModeFilter">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminucidad">Luminucidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+                    </select>
+                </li>
+            </ul>
+            <br>
+                <ul class="sidebar-filter">
+                    <label for="laberl-filtros">Filtros</label> 
+                    <hr>
+                    <br>                  
+                    <li>
+                        <label for="brightnessRange">Brillo</label>
+                        <br>
+                        <input type="range" id="brightnessRange" min="0" max="200" value="100">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="opacityRange">Opacidad</label>
+                        <br>
+                        <input type="range" id="opacityRange" min="0" max="1" step="0.01" value="1">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="contrastRange">Contraste</label>
+                        <br>
+                        <input type="range" id="contrastRange" min="0" max="200" value="100">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="blurRange">Desenfoque</label>
+                        <br>
+                        <input type="range" id="blurRange" min="0" max="10" step="0.1" value="0">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="grayscaleRange">Escala de grises</label>
+                        <br>
+                        <input type="range" id="grayscaleRange" min="0" max="100" value="0">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="sepiaRange">Sepia</label>
+                        <br>
+                        <input type="range" id="sepiaRange" min="0" max="100" value="0">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="hueRange">Hue</label>
+                        <br>
+                        <input type="range" id="hueRange" min="0" max="360" value="0">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="saturateRange">Saturado</label>
+                        <br>
+                        <input type="range" id="saturateRange" min="0" max="200" value="100">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="invertRange">Negativo</label>
+                        <br>
+                        <input type="range" id="invertRange" min="0" max="100" value="0">
+                    </li>                    
+                    <br>
+                    <div class="clear-button">
+                        <button id="clearFiltersButton">Borrar Todo</button>
+                    </div>          
+            </ul>                  
+        </section>
+    </aside>
+    <aside id="aside-text">
+        <section class="aside-text-container">
+            <h4>Texto</h4>
+        </section>
+    </aside>
+
+    <section class="square-section" id="section">            
+        <div class="square" id="square">
+            <div class="texto" id="textoUp">   
+                <h2>Top text</h2>
+            </div>                
+            <div class="cuadrado" id="cuadrado-dos">                
+            </div>
+            <div class="texto"  id="textoDown">
+                <h2>Bottom Text</h2>
+            </div>
+            <div class="download" id="download">
+                <button id="download-button">Download Meme</button>
+            </div> 
+        </div>
+    </section>  
+    <script src="/script/main.js"></script>
 </body>
 </html>
