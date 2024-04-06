@@ -49,20 +49,18 @@ modoButton.addEventListener("click", () => {
         cuadrado.style.backgroundColor = "#1b3a4b";
         cuadradoDos.style.backgroundColor= "#006466";
         download.style.backgroundColor = "#4d194d";
-        footer.style.backgroundColor = "#4d194d";
-        
+        footer.style.backgroundColor = "#4d194d";           
         sectionPart.style.color = "black";
         modo = "claro";
     } else  {    
-        modoButton.textContent = "Pink Mode";
+        modoButton.textContent = "Violet Mode";
         heroButton.style.color = "black";
         heroSection.style.backgroundColor = "black";
         sectionPart.style.backgroundColor = "black";
         cuadrado.style.backgroundColor = "black";
         cuadradoDos.style.backgroundColor = "grey";
         download.style.backgroundColor = "black";
-        footer.style.backgroundColor = "black";
-        
+        footer.style.backgroundColor = "black";        
         sectionPart.style.color = "white";
         modo = "dark";
     }
@@ -186,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* S e c t i o n  T e x t */
+
 /* Agregar texto sup e inf */
 const superiorInput = document.getElementById('text-input-sup');
 const inferiorInput = document.getElementById('text-input-inf');
@@ -302,34 +301,71 @@ fontSize.addEventListener('input', () => {
  });
 
 
-// Escucha el evento de cambio en el input de número
-fontSize.addEventListener('change', function() {
+
+/* fontSize.addEventListener('change', function() {
     const selectedFontSize = fontSize.value;
     
     textoUp.style.fontSize = selectedFontSize + 'px';
+    textoDown.style.fontSize = selectedFontSize + 'px';
 });
-
+ */
 
 /* Alineado de texto */
+// Obtener referencias a los elementos de botón y texto
+const textAlignLeft = document.getElementById('text-align-left');
+const textAlignCenter = document.getElementById('text-align-center');
+const textAlignRight = document.getElementById('text-align-right');
 
-let textAlignLeft = document.getElementById('text-align-left');
-let textAlignCenter = document.getElementById('text-align-center');
-let textAlignRight = document.getElementById('text-align-right');
 
+// Agregar event listeners a los botones para cambiar la alineación
 textAlignLeft.addEventListener('click', () => {
     textoUp.style.textAlign = 'left';
     textoDown.style.textAlign = 'left';
-}
-);
+});
+
 textAlignCenter.addEventListener('click', () => {
     textoUp.style.textAlign = 'center';
     textoDown.style.textAlign = 'center';
-}
-);
+});
 
 textAlignRight.addEventListener('click', () => {
     textoUp.style.textAlign = 'right';
     textoDown.style.textAlign = 'right';
-}
-);
+});
 
+
+/* Contorn */
+const contornNone = document.getElementById('contorn-none');
+const contornLight = document.getElementById('contorn-light');
+const contornDark = document.getElementById('contorn-dark');
+
+contornNone.addEventListener('click', () => {
+    textoUp.style.textShadow = '0 0 transparent';
+    textoDown.style.textShadow = '0 0 transparent';
+}   
+);
+contornLight.addEventListener('click', () => {
+    textoUp.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+    textoDown.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+}   
+);
+contornDark.addEventListener('click', () =>{
+    textoUp.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
+    textoDown.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
+});
+
+
+/* Espaciado e Interlineado" */
+let padding = document.getElementById('padding-p');
+// line-height
+let lineHeight = document.getElementById('line-height');
+
+padding.addEventListener('change', ()=> {
+  textoUp.style.padding = `${padding.value}px 30px`;
+  textoDown.style.padding = `${padding.value}px 30px`;
+});
+
+lineHeight.addEventListener('change', ()=> {
+  textoUp.style.lineHeight = lineHeight.value;
+    textoDown.style.lineHeight = lineHeight.value;
+});

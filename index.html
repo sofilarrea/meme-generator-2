@@ -13,7 +13,7 @@
        <ul class="hero-button">
             <li><button id ="openSidebarButtonImg"><i class="texto fa-regular fa-image"></i>Images</button></li>
             <li><button id="openSidebarButtonText"><i class="texto fa-solid fa-font"></i>Text</button></li>
-            <li><button id="modo">Dark Mode</button></li>         
+            <li><button id="modo"><i class="fa-regular fa-lightbulb" style="color: #ffffff;"></i>Dark Mode</button></li>         
         </ul>   
     </header>
     <aside id="aside-image">
@@ -31,7 +31,7 @@
                 <li>
                     <label id="label-background" aria-label="Color del fondo">Fondo</label>
                     <input type="color" id="color" value="#FFFFFF">
-                    <label id="hexa-color" aria-label="Color en hexadecimal"></label>
+                   
                 </li>
                 <br>
                 <li>                            
@@ -110,28 +110,28 @@
             </ul>                  
         </section>
     </aside>
-    <aside id="aside-text">
+    <aside id="aside-text" class="aside-text">
         <section class="aside-text-container">
             <button id="close-text">Close</button>
             <h4>Texto</h4>
             <div class="sidebar-input-text"> 
                 <ul class="first-list">
                     <li>
-                        <p>Superior</p>
+                        <p><strong>Superior</strong></p>
                         <input type="text" id="text-input-sup" placeholder="">
                         <br>
                         <input type="checkbox" id="hideTextCheckboxSup">
                         <label for="hideTextCheckboxSup">Sin texto superior</label>
                     </li>
                     <li>
-                        <p>Inferior</p> 
+                        <p> <strong>Inferior</strong></p> 
                         <input type="text" id="text-input-inf" placeholder=""> 
                         <br>  
                         <input type="checkbox" id="hideTextCheckboxInf">
                         <label for="hideTextCheckboxInf">Sin texto inferior</label>
                     </li>
                     <li>
-                        <label id="font-family" aria-label="Estilos de fuente">Fuente</label>
+                        <label id="font-family" aria-label="Estilos de fuente"><strong>Fuente</strong></label>
                         <select id="font-family-p">
                             <option value="impact">Impact</option>
                             <option value="arial">Arial</option>
@@ -146,7 +146,6 @@
                     </li>
                     <br>
                     <li>
-                        <label id="text-font-size" aria-label="Tamaño de texto">Tamaño</label>
                         <input type="number" min="30" max="60" value="30" id="font-size">
                     </li>
                     <br>
@@ -180,20 +179,20 @@
                     <li class="contorno">
                         <label id="label-contorn">Contorno</label>
                         <div class="botons-directions-txt">
-                            <button type="button" id="contorno-p-none" aria-label="Sin contorno">Ninguno</button>
+                            <button type="button" id="contorno-none" aria-label="Sin contorno">Ninguno</button>
                             <br>
-                            <button type="button" id="contorno-p-light" aria-label="Contorno claro">Claro</button>
+                            <button type="button" id="contorno-light" aria-label="Contorno claro">Claro</button>
                             <br>
-                            <button type="button" id="contorno-p-dark" aria-label="Contorno oscuro">Oscuro</button>
+                            <button type="button" id="contorno-dark" aria-label="Contorno oscuro">Oscuro</button>
                         </div>
                     </li>
                     <li>
                         <label id="label-space">Espaciado</label>
-                        <input type="number" min="10" max="30" value="10" id="padding-p" aria-label="Espacio del texto">
+                        <input type="number" min="10" max="30" value="10" id="padding-" aria-label="Espacio del texto">
                     </li>
                     <li>
                         <label id="line-height-label">Interlineado</label>
-                        <select id="line-height-p">
+                        <select id="line-height">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2">1.2</option>

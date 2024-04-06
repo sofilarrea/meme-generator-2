@@ -30,83 +30,28 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px; 
+    gap: 40px; 
     list-style: none;
     position: relative;
-    top: 35%;  
+    top: 25%;  
 }
 .hero-button button{
+    margin: 10px auto;
     font-size: 16px;
     border: none;
-    margin-bottom: 40px;  
-    background-color: transparent;    
+/*     margin-bottom: 40px;  
+ */    background-color: transparent;    
     color: white;     
     font-weight: bolder;
     text-shadow: black 0.5px 0px 0px; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
- /* S e c t i o n  I m a g e n */
-
-.aside-container ul li,
-.aside-container label,
-.sidebar ul  label,
-.aside-text-container,
-.aside-text-container ul li{
-    list-style: none;
-    color: white;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;   
-}
-.sidebar-fondo{
-    display: flex;
-    justify-content: space-between;
-}
-.title-img,
-.aside-text-container h4{   
-    color: white;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 13px;
-    text-align: center;
-}
-.first-list li{
-    margin-top: 20px;
-
+.hero-button button i{
+    margin: 10px;
 }
 
+/* S e c t i o n  P r i n c i p a l  C u a d r a d o s */
 
-#aside-image,
-#aside-text {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    background-color: rgb(245, 13, 156); /* Fondo semitransparente */
-    display: none; /* Por defecto oculto */
-    overflow-y: auto; /* Agregar barra de desplazamiento vertical si es necesario */
-}
-#aside-image .aside-container,
-#aside-text .aside-text-container {
-    position: absolute;
- 
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-}
-.range{
-    width: 90%;
-    margin: 2px auto;
-    text-align: center;
-    position: relative;
-    left: 5%;
-}
- /* S e c t i o n  P r i n c i p a l */
-/* Cuadraro */
 .square-section{
     display: flex;
     justify-content: center;
@@ -160,3 +105,43 @@ body{
     width: 100%;
     color: white;
 }
+
+
+
+/* S E C T I O N  I M A G E */
+#aside-image,
+#aside-text {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 999;
+    background-color: #4d194d; 
+    display: none; 
+    overflow-y: auto;
+    width: 60%; 
+    float: right;
+}
+.title-img,
+.aside-text-container h4{   
+    color: white;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.aside-container ul li,
+.aside-container label,
+.sidebar ul  label,
+.aside-text-container,
+.aside-text-container ul li{
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
