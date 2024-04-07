@@ -79,7 +79,6 @@ imgInput.addEventListener("keyup", function (event) {
             squareDos.style.backgroundImage = `url('${urlImagen}')`;
             squareDos.style.backgroundSize = "cover";
             squareDos.style.backgroundPosition = "center";
-            squareDos.style.backgroundRepeat = "no-repeat";
             imgInput.value = ""; // Saco la url deel input
         } else {
             console.log("No se proporcionó una URL válida para la imagen.");
@@ -364,7 +363,6 @@ const paddingInput = document.getElementById('padding-');
 paddingInput.addEventListener('input', () => {
     const paddingValue = paddingInput.value;
 
-    // Aplicar el espaciado al texto superior y al texto inferior
     textoUp.style.padding = `${paddingValue}px`;
     textoDown.style.padding = `${paddingValue}px`;
 });
@@ -376,7 +374,6 @@ const lineHeightSelect = document.getElementById('line-height');
 lineHeightSelect.addEventListener('change', () => {
     const selectedLineHeight = lineHeightSelect.value;
 
-    // Aplicar el interlineado seleccionado al texto superior y al texto inferior
     textoUp.style.lineHeight = selectedLineHeight;
     textoDown.style.lineHeight = selectedLineHeight;
 });
@@ -387,52 +384,22 @@ lineHeightSelect.addEventListener('change', () => {
 
 /* download */
 /* Descargar Meme */
+document.getElementById("download-button").addEventListener("click", function () {
+  const section = document.getElementById("section");
 
-downloadButton.addEventListener('click', () => {
-  // Selecciona el elemento que contiene el meme
-  const memeContainer = document.getElementById('square');
+  const config = {
+      quality: 1
+  };
 
-  if (!memeContainer) {
-      console.error("No se encontró el contenedor del meme ('#square')");
-      return; // Salir de la función si el contenedor no está presente
-  }
+  domtoimage.toJpeg(section, config).then(function (dataUrl) {
 
-  // Crea un lienzo temporal para dibujar el meme
-  const canvas = document.createElement('canvas');
-  const context = canvas.getContext('2d');
+      const link = document.createElement("a");
+      link.download = "meme.jpeg";
+      link.href = dataUrl;
 
-  // Establece las dimensiones del lienzo para que coincidan con el contenedor del meme
-  const containerWidth = memeContainer.offsetWidth;
-  const containerHeight = memeContainer.offsetHeight;
-  canvas.width = containerWidth;
-  canvas.height = containerHeight;
 
-  // Dibuja el contenido del contenedor de meme en el lienzo
-  context.drawImage(memeContainer, 0, 0, containerWidth, containerHeight);
-
-  // Obtén la URL de la imagen del lienzo
-  const memeImageUrl = canvas.toDataURL('image/png');
-
-  // Crea un elemento de enlace temporal para descargar la imagen
-  const downloadLink = document.createElement('a');
-  downloadLink.href = memeImageUrl;
-  downloadLink.download = 'meme.png'; // Nombre del archivo descargado
-
-  // Agrega el enlace al documento y simula un clic en él
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-
-  // Elimina el enlace del documento después de la descarga
-  document.body.removeChild(downloadLink);
+      link.click();
+  }).catch(function (error) {
+      console.error("Error al convertir el contenido a JPEG:", error);
+  });
 });
-
-
-
-
-domtoimage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
-    .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
-        link.href = dataUrl;
-        link.click();
-    });
