@@ -12,19 +12,19 @@ asideButtonImg.addEventListener('click', () => {
 asideButtonText.addEventListener('click', () => {
     asideImg.style.display = 'none';
     asideText.style.display = 'block';
-}); 
+});
 
 const closeImg = document.getElementById('close-img');
 
 closeImg.addEventListener('click', () => {
     asideImg.style.display = 'none';
-    
+
 });
 const closeText = document.getElementById('close-text');
 
 closeText.addEventListener('click', () => {
     asideText.style.display = 'none';
-    
+
 });
 
 
@@ -40,19 +40,19 @@ const heroButton = document.getElementById("hero-section")
 const asideContainer = document.getElementById("aside-text-container")
 const footer = document.getElementById("footer")
 
-let modo = "claro"; 
+let modo = "claro";
 modoButton.addEventListener("click", () => {
     if (modo === "dark"){
-        modoButton.textContent = "Dark Mode";       
+        modoButton.textContent = "Dark Mode";
         heroSection.style.backgroundColor = "#4d194d";
         sectionPart.style.backgroundColor = "#4d194d";
         cuadrado.style.backgroundColor = "#1b3a4b";
         cuadradoDos.style.backgroundColor= "#006466";
         download.style.backgroundColor = "#4d194d";
-        footer.style.backgroundColor = "#4d194d";           
+        footer.style.backgroundColor = "#4d194d";
         sectionPart.style.color = "black";
         modo = "claro";
-    } else  {    
+    } else  {
         modoButton.textContent = "Violet Mode";
         heroButton.style.color = "black";
         heroSection.style.backgroundColor = "black";
@@ -60,7 +60,7 @@ modoButton.addEventListener("click", () => {
         cuadrado.style.backgroundColor = "black";
         cuadradoDos.style.backgroundColor = "grey";
         download.style.backgroundColor = "black";
-        footer.style.backgroundColor = "black";        
+        footer.style.backgroundColor = "black";
         sectionPart.style.color = "white";
         modo = "dark";
     }
@@ -72,7 +72,6 @@ const imgInput = document.getElementById("img_input");
 const squareDos = document.getElementById("cuadrado-dos");
 
 imgInput.addEventListener("keyup", function (event) {
-    console.log("dentro de la funcion")
     if (event.key === "Enter") {
         const urlImagen = imgInput.value.trim();
 
@@ -99,7 +98,7 @@ color.addEventListener('input', ()=> {
     aplyBlendMode();
 });
 
-blendModeFilter.addEventListener('change', ()=> {    
+blendModeFilter.addEventListener('change', ()=> {
     containerImg.style.backgroundImage =  aplyBlendMode();
 });
 
@@ -192,12 +191,12 @@ const textoUp = document.getElementById('textoUp');
 const textoDown = document.getElementById('textoDown');
 
 superiorInput.addEventListener('keyup', actualizarTexto);
-inferiorInput.addEventListener('keyup', actualizarTexto);   
+inferiorInput.addEventListener('keyup', actualizarTexto);
 
 function actualizarTexto() {
     const textoSuperior = superiorInput.value;
     const textoInferior = inferiorInput.value;
-   
+
 
     const textoSuperiorHTML = `<h2>${textoSuperior}</h2>`;
     const textoInferiorHTML = `<h2>${textoInferior}</h2>`;
@@ -225,27 +224,27 @@ function toggleTextoSup() {
 /* inf */
 function toggleTextoInf() {
     if (textoDown.style.visibility === 'hidden') {
-        
+
         textoDown.style.visibility = 'visible';
     } else {
-        
+
         textoDown.style.visibility = 'hidden';
     }
 }
 
 /* Texto cambiar de  color */
-const colorInputText = document.getElementById("color_input_texto"); 
+const colorInputText = document.getElementById("color_input_texto");
 
 colorInputText.addEventListener('input', ()=> {
     console.log("dentro de la funcion")
-   
-    textoUp.style.color = colorInputText.value;    
+
+    textoUp.style.color = colorInputText.value;
     textoDown.style.color = colorInputText.value;
 });
 
 
 /* Fondo cambiar de color */
-const colorInputFondo = document.getElementById("color_input_fondo"); 
+const colorInputFondo = document.getElementById("color_input_fondo");
 
 colorInputFondo.addEventListener('input', cambioColorFondo);
 function cambioColorFondo() {
@@ -258,7 +257,7 @@ const fontFamilyP = document.getElementById('font-family-p');
 
 // Font family, size and text direction
 fontFamilyP.addEventListener('change', fontFamilyChange);
-  
+
 fontFamilyP.addEventListener('change', () => {
     fontFamilyChange();
 });
@@ -304,7 +303,7 @@ fontSize.addEventListener('input', () => {
 
 /* fontSize.addEventListener('change', function() {
     const selectedFontSize = fontSize.value;
-    
+
     textoUp.style.fontSize = selectedFontSize + 'px';
     textoDown.style.fontSize = selectedFontSize + 'px';
 });
@@ -339,33 +338,101 @@ const contornNone = document.getElementById('contorn-none');
 const contornLight = document.getElementById('contorn-light');
 const contornDark = document.getElementById('contorn-dark');
 
-contornNone.addEventListener('click', () => {
-    textoUp.style.textShadow = '0 0 transparent';
-    textoDown.style.textShadow = '0 0 transparent';
-}   
-);
-contornLight.addEventListener('click', () => {
-    textoUp.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
-    textoDown.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
-}   
-);
-contornDark.addEventListener('click', () =>{
-    textoUp.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
-    textoDown.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
+if (contornNone && contornLight && contornDark) {
+    contornNone.addEventListener('click', () => {
+        textoUp.style.textShadow = '0 0 transparent';
+        textoDown.style.textShadow = '0 0 transparent';
+    });
+
+    contornLight.addEventListener('click', () => {
+        textoUp.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+        textoDown.style.textShadow ='rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+    });
+
+    contornDark.addEventListener('click', () =>{
+        textoUp.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
+        textoDown.style.textShadow = "black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px"
+    });
+} else {
+    console.error("Uno o más elementos con IDs 'contorn-none', 'contorn-light' o 'contorn-dark' no fueron encontrados.");
+}
+
+
+/* Padding */
+const paddingInput = document.getElementById('padding-');
+
+paddingInput.addEventListener('input', () => {
+    const paddingValue = paddingInput.value;
+
+    // Aplicar el espaciado al texto superior y al texto inferior
+    textoUp.style.padding = `${paddingValue}px`;
+    textoDown.style.padding = `${paddingValue}px`;
 });
 
 
-/* Espaciado e Interlineado" */
-let padding = document.getElementById('padding-p');
-// line-height
-let lineHeight = document.getElementById('line-height');
+/* Line Hegiht */
+const lineHeightSelect = document.getElementById('line-height');
 
-padding.addEventListener('change', ()=> {
-  textoUp.style.padding = `${padding.value}px 30px`;
-  textoDown.style.padding = `${padding.value}px 30px`;
+lineHeightSelect.addEventListener('change', () => {
+    const selectedLineHeight = lineHeightSelect.value;
+
+    // Aplicar el interlineado seleccionado al texto superior y al texto inferior
+    textoUp.style.lineHeight = selectedLineHeight;
+    textoDown.style.lineHeight = selectedLineHeight;
 });
 
-lineHeight.addEventListener('change', ()=> {
-  textoUp.style.lineHeight = lineHeight.value;
-    textoDown.style.lineHeight = lineHeight.value;
+
+
+
+
+/* download */
+/* Descargar Meme */
+
+downloadButton.addEventListener('click', () => {
+  // Selecciona el elemento que contiene el meme
+  const memeContainer = document.getElementById('square');
+
+  if (!memeContainer) {
+      console.error("No se encontró el contenedor del meme ('#square')");
+      return; // Salir de la función si el contenedor no está presente
+  }
+
+  // Crea un lienzo temporal para dibujar el meme
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+
+  // Establece las dimensiones del lienzo para que coincidan con el contenedor del meme
+  const containerWidth = memeContainer.offsetWidth;
+  const containerHeight = memeContainer.offsetHeight;
+  canvas.width = containerWidth;
+  canvas.height = containerHeight;
+
+  // Dibuja el contenido del contenedor de meme en el lienzo
+  context.drawImage(memeContainer, 0, 0, containerWidth, containerHeight);
+
+  // Obtén la URL de la imagen del lienzo
+  const memeImageUrl = canvas.toDataURL('image/png');
+
+  // Crea un elemento de enlace temporal para descargar la imagen
+  const downloadLink = document.createElement('a');
+  downloadLink.href = memeImageUrl;
+  downloadLink.download = 'meme.png'; // Nombre del archivo descargado
+
+  // Agrega el enlace al documento y simula un clic en él
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+
+  // Elimina el enlace del documento después de la descarga
+  document.body.removeChild(downloadLink);
 });
+
+
+
+
+domtoimage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });

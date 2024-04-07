@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="hero-section" id="hero-section">     
-            <h1 class="title">Meme Generator</h1>      
+    <header class="hero-section" id="hero-section">
+            <h1 class="title">Meme Generator</h1>
        <ul class="hero-button">
             <li><button id ="openSidebarButtonImg"><i class="texto fa-regular fa-image"></i>Images</button></li>
             <li><button id="openSidebarButtonText"><i class="texto fa-solid fa-font"></i>Text</button></li>
-            <li><button id="modo"><i class="fa-regular fa-lightbulb" style="color: #ffffff;"></i>Dark Mode</button></li>         
-        </ul>   
+            <li><button id="modo"><i class="fa-regular fa-lightbulb" style="color: #ffffff;"></i>Dark Mode</button></li>
+        </ul>
     </header>
     <aside id="aside-image">
         <section class="aside-container">
             <button id="close-img">Close</button>
             <h4 class="title-img">Imágen</h4>
-            <ul class="sidebar-input">   
+            <ul class="sidebar-input">
                 <li>
                     <label id="label-url">URL</label>
                     <input type="text" id="img_input"  placeholder="Ingrese la URL de la imagen y presione Enter">
@@ -31,10 +31,9 @@
                 <li>
                     <label id="label-background" aria-label="Color del fondo">Fondo</label>
                     <input type="color" id="color" value="#FFFFFF">
-                   
                 </li>
                 <br>
-                <li>                            
+                <li>
                     <select id="blendModeFilter">
                         <option value="ninguno">Ninguno</option>
                         <option value="aclarar">Aclarar</option>
@@ -47,9 +46,9 @@
             </ul>
             <br>
             <ul class="sidebar-filter">
-                    <label for="laberl-filtros">Filtros</label> 
+                    <label for="laberl-filtros">Filtros</label>
                     <hr>
-                    <br>                  
+                    <br>
                     <li>
                         <label for="brightnessRange">Brillo</label>
                         <br>
@@ -102,19 +101,19 @@
                         <label for="invertRange">Negativo</label>
                         <br>
                         <input type="range" id="invertRange" min="0" max="100" value="0" class="range">
-                    </li>                    
+                    </li>
                     <br>
                     <div class="clear-button">
                         <button id="clearFiltersButton">Borrar Todo</button>
-                    </div>          
-            </ul>                  
+                    </div>
+            </ul>
         </section>
     </aside>
     <aside id="aside-text" class="aside-text">
         <section class="aside-text-container">
             <button id="close-text">Close</button>
             <h4>Texto</h4>
-            <div class="sidebar-input-text"> 
+            <div class="sidebar-input-text">
                 <ul class="first-list">
                     <li>
                         <p><strong>Superior</strong></p>
@@ -124,9 +123,9 @@
                         <label for="hideTextCheckboxSup">Sin texto superior</label>
                     </li>
                     <li>
-                        <p> <strong>Inferior</strong></p> 
-                        <input type="text" id="text-input-inf" placeholder=""> 
-                        <br>  
+                        <p> <strong>Inferior</strong></p>
+                        <input type="text" id="text-input-inf" placeholder="">
+                        <br>
                         <input type="checkbox" id="hideTextCheckboxInf">
                         <label for="hideTextCheckboxInf">Sin texto inferior</label>
                     </li>
@@ -149,9 +148,7 @@
                         <input type="number" min="30" max="60" value="30" id="font-size">
                     </li>
                     <br>
-                    <li>
-                        <div class="botons-text-direction">
-                            <button type="button" class="button-direction" aria-label=" Izquierda">
+                    <li>                            <button type="button" class="button-direction" aria-label=" Izquierda">
                                 <i class="fa-solid fa-align-left" id="text-align-left"></i>
                             </button>
                             <button type="button" class="button-direction" aria-label="Texto inferior" aria-label="Centro">
@@ -160,30 +157,30 @@
                             <button type="button" class="button-direction" aria-label="Derecha">
                                 <i class="fa-solid fa-align-right" id="text-align-right"></i>
                             </button>
-                        </div>
+
                     </li>
-                </ul>  
+                </ul>
             </div>
             <div class="sidebar-filter-text">
                 <ul class="color">
                     <li>
-                        <p>Color</p> 
+                        <p>Color</p>
                         <input type="color" id="color_input_texto">
                     </li>
                     <li>
-                        <p>Fondo</p> 
-                        <input type="color" id="color_input_fondo"> 
+                        <p>Fondo</p>
+                        <input type="color" id="color_input_fondo">
                     </li>
-                </ul>           
+                </ul>
                 <ul id="space-text-list" class="botones">
                     <li class="contorno">
                         <label id="label-contorn">Contorno</label>
                         <div class="botons-directions-txt">
-                            <button type="button" id="contorno-none" aria-label="Sin contorno">Ninguno</button>
+                            <button type="button" id="contorn-none" aria-label="Sin contorno">Ninguno</button>
                             <br>
-                            <button type="button" id="contorno-light" aria-label="Contorno claro">Claro</button>
+                            <button type="button" id="contorn-light" aria-label="Contorno claro">Claro</button>
                             <br>
-                            <button type="button" id="contorno-dark" aria-label="Contorno oscuro">Oscuro</button>
+                            <button type="button" id="contorn-dark" aria-label="Contorno oscuro">Oscuro</button>
                         </div>
                     </li>
                     <li>
@@ -202,23 +199,23 @@
                         </select>
                     </li>
                 </ul>
-            </div>       
+            </div>
         </section>
-    </aside> 
-    <section class="square-section" id="section">            
-        <div class="square" id="square">             
-                <h2 id="textoUp">Top text</h2>                  
-            <div class="cuadrado" id="cuadrado-dos"></div>          
-                <h2 id="textoDown">Bottom Text</h2>           
+    </aside>
+    <section class="square-section" id="section">
+        <div class="square" id="square">
+                <h2 id="textoUp">Top text</h2>
+            <div class="cuadrado" id="cuadrado-dos"></div>
+                <h2 id="textoDown">Bottom Text</h2>
             <div class="download" id="download">
                 <button id="download-button">Download Meme</button>
-            </div> 
+            </div>
         </div>
     </section>
-    
+
     <footer class="footer-section" id="footer">
         <p class="footer-p">© 2021 Meme Generator</p>
-    </footer> 
+    </footer>
     <script src="/script/main.js"></script>
 </body>
 </html>
